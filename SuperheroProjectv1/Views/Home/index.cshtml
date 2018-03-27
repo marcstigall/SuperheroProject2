@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SuperheroProjectv1.Models.UserModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>All Superheros Must Register!</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Purpose</h2>
+        <p>
+            The purpose of this service is to register all beings in the world who have been endowed with incredible powers. These records can be released to the public for everyone to see. Press the blue start button to get begin.
+        </p>
+
+        <p class="lead">
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Start</button>
+        </p>
+        @* Modal *@
+        <div id="myModal" class="modal fade" role="dialog">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Superhero Registry Form</h4>
+                </div>
+                <div class="modal-body">
+                    @using (Html.BeginForm("Create", "UserModels", FormMethod.Post))
+                {
+                    <label>Name:</label>
+                    @Html.TextBox("Name");
+                <br />
+                <label>Password:</label>
+                @Html.Password("Password");
+            <input type="submit" value="Submit">
+    }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @* Google powers *@
+        <h2>Can't think of power name?</h2>
+        <p>You can search what it is your power does and get information about it online before registering.</p>
+        <p><a class="btn btn-default" href="http://www.google.com">Google my Powers &raquo;</a></p>
+    </div>
+    @* Game of thrones section *@
+    <div class="col-md-4">
+        <h2>Superhero GOT fans ONLY</h2>
+        <p>Of course a superhero's life still needs entertainment sometimes. Check out the Game of Thrones website.</p>
+        <p><a class="btn btn-default" href="http://gameofthrones.com/">GOT Website &raquo;</a></p>
+    </div>
+</div>

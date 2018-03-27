@@ -1,0 +1,42 @@
+﻿@model SuperheroProjectv1.Models.SuperheroModel
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SuperheroModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Power)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Power)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Backstory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Backstory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SuperheroModelId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
