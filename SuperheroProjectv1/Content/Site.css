@@ -1,4 +1,5 @@
 ﻿body {
+   background-color: indianred !important;
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -15,4 +16,14 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.nav{
+    list-style-type: none;
+}
+
+.jumbotron {
+    border: 12px dashed;
+    background-color: darkcyan;
+}
+
 
